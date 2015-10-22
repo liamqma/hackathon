@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io('http://localhost:3030');
+        socket.on('response', function (response) {
+            console.log(response);
+        });
+
+        socket.emit('request', {
+            uuid: 'de305d54-75b4-431b-adb2-eb6b9e546014',
+            url: 'http://nl-beauty-prev.elasticbeanstalk.com/static/img/honey_logo_color.png',
+            headers: {
+                'Accept':'image/webp,image/*,*/*;q=0.8',
+                'Accept-Encoding': 'gzip, deflate, sdch',
+                'Accept-Language': 'en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4,zh-TW;q=0.2',
+                'Cache-Control': 'max-age=0',
+                'Connection': 'keep-alive',
+                'Cookie': 'prefcookie=WCFpqbJ8yT6cQUAgCwLYRzOrBuNHgJu4jattKt9oL9NYdIWBfJi2vA%3d%3d; rollout=%7B%22site%22%3A%22old%22%2C%22precedence%22%3A5%2C%22optout%22%3Afalse%7D; optimizelyEndUserId=oeu1418622498319r0.9159789041150361; optimizelySegments=%7B%221468932235%22%3A%22gc%22%2C%221473042146%22%3A%22referral%22%2C%221479322134%22%3A%22false%22%2C%221479332272%22%3A%22none%22%7D; optimizelyBuckets=%7B%222239423923%22%3A%222218636235%22%7D; MUID=241595CD7EB0645C032693E57AB06744; ANON=A=B336A23773372ECDE35D4E3CFFFFFFFF&E=1182&W=1; NAP=V=1.9&E=1128&C=48-WULEXY6DBKduckqmz-1GQOtUtHcG1XrNfPUe6BLXub3Ow-Qw4Sg&W=1; _cb_ls=1; s_cc=true; s_sq=%5B%5BB%5D%5D; _chartbeat2=9GWcSDeTjC2BGqDHe.1442301304175.1445485652266.0000000000000001; _chartbeat_uuniq=3; s_vi=[CS]v1|2A16938285195EFD-60000602C0003125[CE]; _cb_cp=D2FmwWB63GwWcqQiHCkm_avCKnEG0; _chartbeat4=t=D2FmwWB63GwWcqQiHCkm_avCKnEG0&E=0&x=156&c=0.05&y=8801&w=240',
+                'Host': 'honey.ninemsn.com.au',
+                'If-Modified-Since': 'Mon, 19 Oct 2015 04:08:24 GMT',
+                'If-None-Match': '"56246cb8-2134"',
+                'Pragma': 'akamai-x-get-client-ip, akamai-x-cache-on, akamai-x-cache-remote-on, akamai-x-check-cacheable, akamai-x-get-cache-key, akamai-x-get-extracted-values, akamai-x-get-nonces, akamai-x-get-ssl-client-session-id, akamai-x-get-true-cache-key, akamai-x-serial-no, akamai-x-feo-trace, akamai-x-get-request-id',
+                'Referer': 'http://honey.ninemsn.com.au/',
+                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36'
+            },
+        });
+
+        socket.emit('request', {
+            uuid: 'de305d54-75b4-431b-adb2-eb6b9e546014',
+            url: 'http://nl-beauty-prev.elasticbeanstalk.com/static/bundle.min.4f4e874e.js',
+            headers: {
+            },
+            cookies: {
+            }
+        });
+    </script>
+</head>
+<body>
+    Page is loaded
+</body>
+</html>
